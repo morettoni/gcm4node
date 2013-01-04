@@ -1,0 +1,20 @@
+{
+  "name": "node-gcm",
+  "version": "0.0.1",
+  "description": "node.js library for Google Cloud Messaging system",
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/morettoni/gcm4node.git",
+    "web": "http://github.com/morettoni/gcm4node"
+  },
+  "author": "Luca Morettoni <luca@morettoni.net>",
+  "keywords": ["google", "gcm", "android", "push", "cloud"],
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "license": "GPLv2",
+  "engines": {
+    "node": ">= 0.6.0"
+  }
+}
