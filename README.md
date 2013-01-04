@@ -11,18 +11,18 @@ $ npm install gcm4node
 ## Usage
 
 ```js
-var gcm4node = require('./lib/gcm4node.js');
+var gcm4node = require('gcm4node');
 
 var gcm = gcm4node.gcm4node({auth:'YOUR_AUTH_KEY', verbose:false});
 
 gcm.on('removed', function (removed) {
-    console.log('removed: ' + removed.length);
+    console.log('removed devices: ' + removed.length);
 });
 gcm.on('updated', function (updated) {
-    console.log('updated: ' + updated.length);
+    console.log('updated devices: ' + updated.length);
 });
 gcm.on('invalid', function (invalid) {
-    console.log('invalid: ' + invalid.length);
+    console.log('invalid devices: ' + invalid.length);
 });
 
 var options = {
@@ -37,7 +37,9 @@ gcm.send(clients, options, function(err, removed, updated, invalid) {
     if (err)
         console.log('ops: ' + err);
     else
-        console.log('removed: ' + removed.length + ', updated: ' + updated.length + ', invalid: ' + invalid.length);
+        console.log('removed: ' + removed.length +
+            ', updated: ' + updated.length +
+            ', invalid: ' + invalid.length);
 });
 ```
 
@@ -62,5 +64,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 
 ## Changelog
+**0.0.2:**
+  * Fixed some typo in the examples
+
 **0.0.1:**
  * First release
