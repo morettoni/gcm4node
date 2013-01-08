@@ -13,7 +13,14 @@ $ npm install gcm4node
 ```js
 var gcm4node = require('gcm4node');
 
-var gcm = gcm4node.gcm4node({auth:'YOUR_AUTH_KEY', verbose:false});
+// only auth is REQUIRED
+var config = {
+    auth: 'YOUR_AUTH_KEY',
+    dryRun: false,
+    group_size: 1000,
+    verbose: false
+};
+var gcm = gcm4node.gcm4node(config);
 
 gcm.on('removed', function (removed) {
     console.log('removed devices: ' + removed.length);
@@ -25,8 +32,11 @@ gcm.on('invalid', function (invalid) {
     console.log('invalid devices: ' + invalid.length);
 });
 
+// only the collapseKey option is REQUIRED
 var options = {
     collapseKey: 'coll_key',
+    delayWhileIdle: true,
+    timeToLive: 0,
     data: {points: 5, user: 'pippo'}
 };
 
