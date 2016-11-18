@@ -1,6 +1,6 @@
 /*
  * gcm4node: node.js library for Google Cloud Messaging system
- * Copyright (C) 2013  Luca Morettoni <luca@morettoni.net>
+ * Copyright (C) 2016  Luca Morettoni <luca@morettoni.net>
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
